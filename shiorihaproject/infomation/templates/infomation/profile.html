@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="{% url 'index' %}"><img src="{% static 'infomation/images/logo.png' %}" alt="Shioriha Ruri"></a></h1>
+</header>
+
+<div id="contents">
+
+<main>
+
+<section>
+
+<h2 class="c blur">Profile<span>プロフィール</span></h2>
+
+<aside class="mb30 blur"><img src="{% static 'infomation/images/img_profile.png' %}" alt=""></aside>
+
+<table class="ta1 blur">
+{% for item in object_list %}
+<tr>
+<th>{{ item.title }}</th>
+<td>{{ item.text }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</section>
+
+</main>
+
+</div>
+<!--/#contents-->
+
+{% endblock content %}

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Shioriha Ruri's Profile</title>
+<link rel="icon" href="{% static 'infomation/images/favicon.png' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="{% static 'infomation/css/style.css' %}">
+</head>
+
+{% block content %}{% endblock content %}
+
+<footer>
+<small>Copyright&copy; <a href="{% url 'index' %}">Shioriha Ruri</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><img src="{% static 'infomation/images/pagetop_icon_another.png' %}"></a></div>
+
+
+<!--/#container-->
+
+<!--開閉ブロック-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a href="{% url 'index' %}">ホーム</a></li>
+<li><a href="{% url 'profile' %}">プロフィール</a></li>
+<li><a href="{% url 'streaming' %}">配信・動画</a></li>
+<li><a href="{% url 'link' %}">リンク集</a></li>
+<li><div class="navbar-nav d-flex flex-row">
+{% if request.user.is_authenticated %}
+<a class="nav-link mx-3" href="{% url 'accounts:logout' %}">ログアウト</a>
+{% else %}
+<a class="nav-link mx-3" href="{% url 'accounts:login' %}">ログイン</a>
+<a class="nav-link mx-3" href="{% url 'accounts:signup' %}">ユーザー登録</a>
+{% endif %}
+</div></li>
+</ul>
+</nav>
+
+<ul class="icon">
+<li><a href="https://twitter.com/Ruri_4ori8" target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.youtube.com/@ShiorihaRuri" target="_blank"><i class="fab fa-youtube"></i></a></li>
+</ul>
+
+</div>
+<!--/#menubar-->
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="{% static 'infomation/js/jquery.inview_set.js' %}"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="{% static 'infomation/js/main.js' %}"></script>
+
+</body>
+</html>

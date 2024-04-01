@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="{% url 'index' %}"><img src="{% static 'infomation/images/logo.png' %}" alt="Shioriha Ruri"></a></h1>
+</header>
+
+<div id="contents">
+
+<main>
+
+<section>
+
+<h2 class="c">Link<span>リンク集</span></h2>
+
+<table class="ta1">
+<tr>
+<th><a href="https://www.youtube.com/@ShiorihaRuri" target="_blank">YouTube</a></th>
+<td>栞葉るり / Shioriha Ruri【にじさんじ】</td>
+</tr>
+<tr>
+<th><a href="https://twitter.com/Ruri_4ori8" target="_blank">X(旧Twitter)</a></th>
+<td>栞葉るり🚓🐾にじさんじ</td>
+</tr>
+<tr>
+<th><a href="https://marshmallow-qa.com/iuupp52a6dqhxzu" target="_blank">マシュマロ</a></th>
+<td>栞葉るり</td>
+</tr>
+<tr>
+<th><a href="https://docs.google.com/forms/d/e/1FAIpQLScgpFUdTOdQzNHDMLun15lOfTU57niGOti-CXcS3Ul7U4_gHA/viewform" target="_blank">お便り箱</a></th>
+<td>栞葉るりの郵便箱</td>
+</tr>
+<tr>
+<th><a href="https://www.nijisanji.jp/talents/l/ruri-shioriha" target="_blank">公式紹介ページ</a></th>
+<td>にじさんじ公式サイト</td>
+</tr>
+<tr>
+<th><a href="https://wikiwiki.jp/nijisanji/%E6%A0%9E%E8%91%89%E3%82%8B%E3%82%8A" target="_blank">非公式Wiki</a></th>
+<td>にじさんじ非公式wiki</td>
+</tr>
+</table>
+
+</section>
+
+</main>
+
+</div>
+<!--/#contents-->
+
+{% endblock content %}

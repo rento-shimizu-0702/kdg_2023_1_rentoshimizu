@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="{% url 'index' %}"><img src="{% static 'infomation/images/logo.png' %}" alt="Shioriha Ruri"></a></h1>
+</header>
+
+<div id="contents">
+
+<main>
+
+<h2 class="c blur">Streaming<span>配信</span></h2>
+
+<h3>初配信</h3>
+<div class="streaming_flex">
+<iframe class="streaming_big" width="100%" height="100%" src="https://www.youtube.com/embed/r_Pul053wwY?si=cWm1fNW-_Boh9WJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div>
+<p>同期3人初配信リレーで、立伝都々(たちつてとと)に次いで二番手を務めた</p>
+<p>配信直後に初めての歌ってみたである<a href="https://youtu.be/p408D8POm5o?si=ggemLQNNnnZn6tzP" target="_blank">童謡「犬のおまわりさん」</a>を投稿した</p>
+</div>
+</div>
+
+<h3>コラボ</h3>
+<div class="streaming_flex">
+<iframe class="streaming_big" width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=q8yjz7z8sRV-GZKr&amp;list=PLvqpBo1ZeA3rUMbZ7x6P-wn6xq3PEVTwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<p>栞葉るりが参加したコラボ動画</p>
+<p>出演した公式番組も含まれる</p>
+<p>先輩や同期たちと絡めて楽しそうな栞葉を見ることができる</p>
+</div>
+</div>
+
+<h2 class="c blur">Video<span>動画</span></h2>
+
+<h3>歌ってみた</h3>
+<div class="streaming_flex">
+<iframe class="streaming_big" width="100%" height="100%" src="https://www.youtube.com/embed/p408D8POm5o?si=JEbBRIaFSN5Mcsry" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<p>初配信後に投稿された栞葉るり初の歌ってみた</p>
+<p>なお、栞葉るりは犬のお巡りさんである。</p>
+</div>
+</div>
+
+<h3>行間ラヂオ</h3>
+<div class="streaming_flex">
+<iframe class="streaming_big" width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=8t7p987lNS2qK3At&amp;list=PLvqpBo1ZeA3ri7fG3FUx2QG5XDd4PnUVN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<p>毎週水曜日19:00に投稿されるラジオ動画</p>
+<p>栞葉るりがテーマに沿って好きに話す</p>
+</div>
+</div>
+
+</main>
+<!--/#contents-->
+</body>
+
+{% endblock content %}
